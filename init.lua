@@ -16,6 +16,7 @@ vim.opt.runtimepath:prepend(lazypath)
 require("lazy").setup({
 require 'plugins.neotree',
 require 'plugins.theme',
+require 'plugins.telescope',
 require 'plugins.lsp',
 require 'plugins.autocompletion'
 })
