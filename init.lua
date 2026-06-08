@@ -1,5 +1,5 @@
-require 'core.options'
-require 'core.keymaps'
+require("core.options")
+require("core.keymaps")
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -14,9 +14,13 @@ end
 vim.opt.runtimepath:prepend(lazypath)
 
 require("lazy").setup({
-require 'plugins.neotree',
-require 'plugins.theme',
-require 'plugins.telescope',
-require 'plugins.lsp',
-require 'plugins.autocompletion'
+	require("plugins.neotree"),
+	require("plugins.theme"),
+	require("plugins.telescope"),
+	require("plugins.lsp"),
+	require("plugins.lualine"),
+	require("plugins.autocompletion"),
+	require("plugins.treesitter"),
+	require("plugins.autoformatting"),
+	require("plugins.misc"),
 })
